@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Écologie & Pollution Plastique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="quiz-container">
+  <h1>Quiz : Écologie et Pollution Plastique</h1>
+  <div id="question-container">
+    <p id="question"></p>
+    <div id="answer-buttons">
+      <button class="answer-btn" onclick="selectAnswer(true)">Vrai</button>
+      <button class="answer-btn" onclick="selectAnswer(false)">Faux</button>
+    </div>
+  </div>
+  <div id="results-container" class="hidden">
+    <h2>Résultats</h2>
+    <p>Vous avez obtenu <span id="score"></span> bonnes réponses sur <span id="total-questions"></span> questions.</p>
+    <button onclick="restartQuiz()">Recommencer le quiz</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

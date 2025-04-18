@@ -1,0 +1,105 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police plus moderne */
+    background-color: #e9f5f2; /* Vert d'eau très clair */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background-color: #fff;
+    padding: 40px; /* Un peu plus d'espace intérieur */
+    border-radius: 12px; /* Bords plus arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombre plus douce */
+    text-align: center;
+    width: 80%; /* Limiter la largeur sur les grands écrans */
+    max-width: 600px;
+}
+
+h1 {
+    color: #2c3e50; /* Bleu foncé discret */
+    margin-bottom: 30px;
+    font-size: 2em; /* Titre un peu plus grand */
+}
+
+#question-container {
+    margin-bottom: 40px;
+}
+
+#question {
+    font-size: 1.3em;
+    color: #34495e; /* Bleu un peu plus clair */
+    margin-bottom: 20px;
+    line-height: 1.6; /* Meilleure lisibilité */
+}
+
+#answer-buttons {
+    display: flex;
+    gap: 15px; /* Espace entre les boutons */
+    justify-content: center; /* Centrer les boutons */
+}
+
+#answer-buttons button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px; /* Bords plus arrondis pour les boutons */
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease; /* Animation douce au survol */
+}
+
+.answer-btn {
+    background-color: #2ecc71; /* Vert plus vif */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.answer-btn:last-child {
+    background-color: #e74c3c; /* Rouge plus vif */
+}
+
+.answer-btn:hover {
+    background-color: #27ae60; /* Vert plus foncé au survol */
+    opacity: 1;
+}
+
+.answer-btn:last-child:hover {
+    background-color: #ce3a3a; /* Rouge plus foncé */
+    opacity: 1;
+}
+
+#results-container {
+    margin-top: 30px;
+}
+
+#results-container h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#results-container p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#results-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db; /* Bleu clair pour le bouton de redémarrage */
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#results-container button:hover {
+    background-color: #2980b9; /* Bleu plus foncé au survol */
+}
+
+.hidden {
+    display: none;
+}
