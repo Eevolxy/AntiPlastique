@@ -1,68 +1,72 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police plus moderne */
-    background-color: #e9f5f2; /* Vert d'eau très clair */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9f5f2;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    padding: 20px; /* Ajout de padding général pour les petits écrans */
 }
 
 .quiz-container {
     background-color: #fff;
-    padding: 40px; /* Un peu plus d'espace intérieur */
-    border-radius: 12px; /* Bords plus arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombre plus douce */
+    padding: 30px; /* Réduction du padding pour les petits écrans */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
-    width: 80%; /* Limiter la largeur sur les grands écrans */
-    max-width: 600px;
+    width: 95%; /* Prend plus de largeur sur les petits écrans */
+    max-width: none; /* Supprime la largeur maximale sur mobile */
 }
 
 h1 {
-    color: #2c3e50; /* Bleu foncé discret */
-    margin-bottom: 30px;
-    font-size: 2em; /* Titre un peu plus grand */
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8em; /* Légère réduction de la taille du titre */
 }
 
 #question-container {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 #question {
-    font-size: 1.3em;
-    color: #34495e; /* Bleu un peu plus clair */
-    margin-bottom: 20px;
-    line-height: 1.6; /* Meilleure lisibilité */
+    font-size: 1.1em; /* Légère réduction de la taille de la question */
+    color: #34495e;
+    margin-bottom: 15px;
+    line-height: 1.5; /* Ajustement de l'interligne */
 }
 
 #answer-buttons {
     display: flex;
-    gap: 15px; /* Espace entre les boutons */
-    justify-content: center; /* Centrer les boutons */
+    flex-direction: column; /* Afficher les boutons verticalement sur les petits écrans */
+    gap: 10px; /* Réduction de l'espace entre les boutons */
+    justify-content: center;
 }
 
 #answer-buttons button {
-    padding: 12px 25px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 8px; /* Bords plus arrondis pour les boutons */
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease; /* Animation douce au survol */
+    font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
 .answer-btn {
-    background-color: #2ecc71; /* Vert plus vif */
+    background-color: #2ecc71;
     color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .answer-btn:last-child {
-    background-color: #e74c3c; /* Rouge plus vif */
+    background-color: #e74c3c;
 }
 
 .answer-btn:hover {
-    background-color: #27ae60; /* Vert plus foncé au survol */
+    background-color: #27ae60;
     opacity: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .answer-btn:last-child:hover {
@@ -71,25 +75,26 @@ h1 {
 }
 
 #results-container {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 #results-container h2 {
     color: #2c3e50;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    font-size: 1.5em; /* Légère réduction de la taille du titre des résultats */
 }
 
 #results-container p {
-    font-size: 1.1em;
+    font-size: 1em;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #results-container button {
     padding: 10px 20px;
     border: none;
     border-radius: 8px;
-    background-color: #3498db; /* Bleu clair pour le bouton de redémarrage */
+    background-color: #3498db;
     color: white;
     cursor: pointer;
     font-size: 1em;
@@ -97,9 +102,51 @@ h1 {
 }
 
 #results-container button:hover {
-    background-color: #2980b9; /* Bleu plus foncé au survol */
+    background-color: #2980b9;
 }
 
 .hidden {
     display: none;
+}
+
+/* Media query pour les écrans de 600px de largeur ou moins */
+@media screen and (max-width: 600px) {
+    .quiz-container {
+        padding: 20px; /* Encore moins de padding sur les très petits écrans */
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    #question {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    #answer-buttons {
+        gap: 8px;
+    }
+
+    #answer-buttons button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    #results-container h2 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    #results-container p {
+        font-size: 0.9em;
+        margin-bottom: 12px;
+    }
+
+    #results-container button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
 }
