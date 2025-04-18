@@ -1,23 +1,53 @@
 const questions = [
     {
-        question: "Le plastique biodégradable se décompose aussi rapidement que les matières organiques.",
-        answer: false
+        question: "À votre avis, combien de tonnes de plastique sont produites chaque années dans le monde ?",
+        answers : [
+            { text: "394 millions", correct: false },
+            { text: "411 millions", correct: false },
+            { text: "460 millions", correct: true }
+        ]
     },
     {
-        question: "Le recyclage du plastique est une solution efficace à 100% contre la pollution.",
-        answer: false
+        question: "Combien de tonne de déchets sont générés chaque année, selon vous ?",
+        answers: [
+            { text: "350 millions", correct: true },
+            { text: "420 millions", correct: false },
+            { text: "320 millions", correct: false }
+        ]
     },
     {
-        question: "Les microplastiques sont des fragments de plastique de moins de 5 millimètres.",
-        answer: true
+        question: "Des millions de tonnes de plastiques finissent dans l'océan chaque année. Vous savez combien ?",
+        answers: [
+            { text: "9 millions", correct: false },
+            { text: "11 millions", correct: true },
+            { text: "13 millions", correct: false },
+            { text: "15 millions", correct: false }
+        ]
     },
     {
-        question: "La production de plastique à partir de ressources fossiles contribue au changement climatique.",
-        answer: true
+        question: "La plastique, ça se recycle... mais seulement à :",
+        answers: [
+            { text: "9%", correct: true },
+            { text: "10%", correct: false },
+            { text: "12%", correct: false },
+            { text: "15%", correct: false }
+        ]
     },
     {
-        question: "Il est possible de recycler tous les types de plastique.",
-        answer: false
+        question: "Des milliers d'animaux marins sont victimes de la pollution dans les océans. Combien à votre avis ?",
+        answers: [
+            { text: " Plus de 75 000", correct: false },
+            { text: "Plus de 83 000", correct: false },
+            { text: "Plus de 100 000", correct: true }
+        ]
+    },
+    {
+        question: "Combien d'années prend une bouteille en plastique pour se décomposer ?",
+        answers: [
+            { text: "500 ans", correct: false },
+            { text: "450 ans", correct: true },
+            { text: "400 ans", correct: false }
+        ]
     }
     // Ajoutez d'autres questions ici
 ];
@@ -35,15 +65,24 @@ function loadQuestion() {
     if (currentQuestionIndex < questions.length) {
         const currentQuestion = questions[currentQuestionIndex];
         questionElement.textContent = currentQuestion.question;
+
+        answerButtonsElement.innerHTML = '';
+
+        currentQuestion.answers.forEach(answer => {
+            const button = document.createElement('button');
+            button.textContent = answer.text;
+            button.classList.add('answer-btn');
+            button.addEventListener('click', () => selectAnswer(answer.correct));
+            answerButtonsElement.appendChild(button);
+        })
     } else {
         showResults();
     }
 }
 
-function selectAnswer(isTrue) {
+function selectAnswer(isCorrect) {
     if (currentQuestionIndex < questions.length) {
-        const currentQuestion = questions[currentQuestionIndex];
-        if (isTrue === currentQuestion.answer) {
+        if (isCorrect) {
             score++;
         }
         currentQuestionIndex++;
