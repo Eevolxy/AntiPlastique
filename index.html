@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Écologie & Pollution Plastique</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
 <div class="quiz-container">
@@ -14,11 +15,20 @@
     <div id="answer-buttons"></div>
   </div>
   <div id="results-container" class="hidden">
-    <h2>Résultats</h2>
+    <h2 id="result"></h2>
     <p>Vous avez obtenu <span id="score"></span> bonnes réponses sur <span id="total-questions"></span> questions.</p>
     <button onclick="restartQuiz()">Recommencer le quiz</button>
   </div>
 </div>
+
+<div id="popup-container" class="popup-hidden" style="display: none">
+  <div id="popup-content">
+    <p id="answer-result" style="font-weight: bold; font-size: 20px;"></p>
+    <p id="popup-text"></p>
+    <button id="close-popup">Fermer</button>
+  </div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
