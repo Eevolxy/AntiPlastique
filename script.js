@@ -41,9 +41,9 @@ const questions = [
         question: "Des milliers d'animaux marins sont victimes de la pollution dans les océans. Combien à votre avis ?",
         explanation: "Plus de 100 000 animaux marins meurent chaque année à cause de la pollution plastique, par ingestion, étranglement ou blessures.",
         answers: [
-            { text: "Environ de 75 000", correct: false },
-            { text: "Environ de 83 000", correct: false },
-            { text: "Environ de 100 000", correct: true }
+            { text: "Environ 75 000", correct: false },
+            { text: "Environ 83 000", correct: false },
+            { text: "Environ 100 000", correct: true }
         ]
     },
     {
