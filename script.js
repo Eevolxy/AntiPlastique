@@ -28,7 +28,7 @@ const questions = [
         ]
     },
     {
-        question: "La plastique, ça se recycle... mais seulement à :",
+        question: "Le plastique, ça se recycle... mais seulement à :",
         explanation: "Seulement environ 9% de tout le plastique jamais produit a été recyclé. Un pourcentage alarmant qui souligne l'urgence de réduire notre consommation et d'améliorer les systèmes de recyclage.",
         answers: [
             { text: "9%", correct: true },
@@ -41,9 +41,9 @@ const questions = [
         question: "Des milliers d'animaux marins sont victimes de la pollution dans les océans. Combien à votre avis ?",
         explanation: "Plus de 100 000 animaux marins meurent chaque année à cause de la pollution plastique, par ingestion, étranglement ou blessures.",
         answers: [
-            { text: " Plus de 75 000", correct: false },
-            { text: "Plus de 83 000", correct: false },
-            { text: "Plus de 100 000", correct: true }
+            { text: "Environ de 75 000", correct: false },
+            { text: "Environ de 83 000", correct: false },
+            { text: "Environ de 100 000", correct: true }
         ]
     },
     {
