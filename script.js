@@ -62,6 +62,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
+const quizTitle = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results-container');
 const scoreElement = document.getElementById('score');
 const totalQuestionsElement = document.getElementById('total-questions');
@@ -117,6 +118,7 @@ closePopupBtn.addEventListener('click', closePopup);
 function showResults() {
     questionContainer.classList.add('hidden');
     resultsContainer.classList.remove('hidden');
+    quizTitle.classList.add('hidden');
 
     if (score < 3) {
         result.innerText = "C’est un début ! Chaque petite prise de conscience est un pas vers un monde plus durable 🌍💡";
@@ -134,6 +136,7 @@ function restartQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     questionContainer.classList.remove('hidden');
+    quizTitle.classList.remove('hidden');
     resultsContainer.classList.add('hidden');
     loadQuestion();
 }
